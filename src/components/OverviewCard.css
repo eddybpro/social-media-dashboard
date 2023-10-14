@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --color-brand-posi-1: hsl(163, 72%, 41%);
+  --color-brand-nega-2: hsl(356, 69%, 56%);
+
+  --color-border-facebook: hsl(208, 92%, 53%);
+  --color-border-twitter: hsl(203, 89%, 53%);
+  --color-border-insta-1: hsl(37, 97%, 70%);
+  --color-border-insta-2: hsl(329, 70%, 58%);
+  --color-border-youtube: hsl(348, 97%, 39%);
+
+  /* Dark Mode */
+  --dark-color-toggle-bg: linear-gradient(
+    100deg,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --dark-color-hover-bg: hsl(229, 14%, 28%);
+
+  --dark-color-site-1: hsl(230, 17%, 14%);
+  --dark-color-site-1-top: hsl(232, 19%, 15%);
+  --dark-color-site-card: hsl(228, 28%, 20%);
+  --dark-color-brand-1: hsl(228, 34%, 66%);
+  --dark-color-brand-2: hsl(0, 0%, 100%);
+
+  /* Light Mode */
+  --light-color-toggle-bg: hsl(230, 22%, 74%);
+  --light-color-hover-bg: hsl(240, 17%, 80%);
+
+  --light-color-site-1: hsl(0, 0%, 100%);
+  --light-color-site-1-top: hsl(225, 100%, 98%);
+  --light-color-site-card: hsl(227, 47%, 96%);
+  --light-color-brand-1: hsl(228, 12%, 44%);
+  --light-color-brand-2: hsl(230, 17%, 14%);
+
+  --font-inter: "Inter", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.OverviewCard {
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: var(--light-color-site-card);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.OverviewCard:hover {
+  background-color: var(--light-color-hover-bg);
+}
+
+.OverviewCard > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.OverviewCard > div:first-of-type {
+  margin-bottom: 3rem;
+}
+
+.OverviewCard-Name {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: var(--light-color-brand-1);
+  font-weight: 700;
+}
+
+.OverviewCard-SocialIcon {
+  width: 3rem;
+}
+
+.OverviewCard-Num {
+  font-size: 4rem;
+  color: var(--light-color-brand-2);
+}
+
+.OverviewCard-Icon {
+  width: 1rem;
+  vertical-align: 25%;
+  margin-right: 0.5rem;
+}
+
+.OverviewCard-Status {
+  font-size: 1.6rem;
+  color: var(--color-brand-nega-2);
+  font-weight: 700;
+}
+
+.OverviewCard-Status.positive {
+  color: var(--color-brand-posi-1);
+}

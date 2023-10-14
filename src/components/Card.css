@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --color-brand-posi-1: hsl(163, 72%, 41%);
+  --color-brand-nega-2: hsl(356, 69%, 56%);
+
+  --color-border-facebook: hsl(208, 92%, 53%);
+  --color-border-twitter: hsl(203, 89%, 53%);
+  --color-border-insta-1: hsl(37, 97%, 70%);
+  --color-border-insta-2: hsl(329, 70%, 58%);
+  --color-border-youtube: hsl(348, 97%, 39%);
+
+  /* Dark Mode */
+  --dark-color-toggle-bg: linear-gradient(
+    100deg,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --dark-color-hover-bg: hsl(229, 14%, 28%);
+
+  --dark-color-site-1: hsl(230, 17%, 14%);
+  --dark-color-site-1-top: hsl(232, 19%, 15%);
+  --dark-color-site-card: hsl(228, 28%, 20%);
+  --dark-color-brand-1: hsl(228, 34%, 66%);
+  --dark-color-brand-2: hsl(0, 0%, 100%);
+
+  /* Light Mode */
+  --light-color-toggle-bg: hsl(230, 22%, 74%);
+  --light-color-hover-bg: hsl(240, 17%, 80%);
+
+  --light-color-site-1: hsl(0, 0%, 100%);
+  --light-color-site-1-top: hsl(225, 100%, 98%);
+  --light-color-site-card: hsl(227, 47%, 96%);
+  --light-color-brand-1: hsl(228, 12%, 44%);
+  --light-color-brand-2: hsl(230, 17%, 14%);
+
+  --font-inter: "Inter", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.Card {
+  width: 100%;
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  border-radius: 1rem;
+  background-color: var(--light-color-site-card);
+  position: relative;
+  cursor: pointer;
+}
+
+.Card:hover {
+  background-color: var(--light-color-hover-bg);
+}
+
+.Card:nth-of-type(1)::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+  background: var(--color-border-facebook);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.Card:nth-of-type(2)::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+  background: var(--color-border-twitter);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.Card:nth-of-type(3)::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+  background: linear-gradient(
+    120deg,
+    var(--color-border-insta-1),
+    var(--color-border-insta-2)
+  );
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+.Card:nth-of-type(4)::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.6rem;
+  background: var(--color-border-youtube);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.Card-SocialIcon {
+  width: 3rem;
+  margin-right: 0.8rem;
+}
+
+.Card-Name {
+  font-size: 1.6rem;
+  color: var(--light-color-brand-1);
+  font-weight: 700;
+  vertical-align: 50%;
+}
+
+.Card-Num {
+  display: block;
+  font-size: 4rem;
+  color: var(--light-color-brand-2);
+  margin: 2rem 0 1rem;
+}
+
+.Card-Type {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--light-color-brand-1);
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.Card-Icon {
+  width: 1rem;
+  vertical-align: 25%;
+  margin-right: 0.5rem;
+}
+
+.Card-Status {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--color-brand-nega-2);
+}
+
+.Card-Status.positive {
+  color: var(--color-brand-posi-1);
+}
